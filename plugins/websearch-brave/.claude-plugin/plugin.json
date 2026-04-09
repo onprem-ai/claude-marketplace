@@ -3,5 +3,5 @@
   "description": "Privacy-focused web search via Brave MCP tools",
   "version": "1.0.0",
   "keywords": ["websearch", "brave", "privacy", "news"],
-  "commands": "skills/websearch-brave.md"
+  "skills": "./skills/"
 }

@@ -3,5 +3,5 @@
   "description": "Web search with code-optimized search via Exa MCP tools",
   "version": "1.0.0",
   "keywords": ["websearch", "exa", "code-search", "api-docs"],
-  "commands": "skills/websearch-exa.md"
+  "skills": "./skills/"
 }
