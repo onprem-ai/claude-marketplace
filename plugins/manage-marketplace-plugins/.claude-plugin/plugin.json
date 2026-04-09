@@ -1,0 +1,6 @@
+{
+  "name": "add-plugin-to-marketplace",
+  "description": "Guide for adding plugins to the Claude marketplace",
+  "version": "1.0.0",
+  "commands": "skills/add-plugin-to-marketplace.md"
+}

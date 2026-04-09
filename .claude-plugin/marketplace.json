@@ -1,0 +1,34 @@
+{
+  "name": "onprem-ai",
+  "owner": {
+    "name": "onprem-ai"
+  },
+  "plugins": [
+    {
+      "name": "mcp-md-to-pdf",
+      "source": {
+        "source": "github",
+        "repo": "onprem-ai/mcp-md-to-pdf"
+      },
+      "description": "Convert Markdown to PDF with corporate branding, headers, footers, and syntax highlighting",
+      "keywords": ["markdown", "pdf", "conversion", "branding"]
+    },
+    {
+      "name": "websearch-exa",
+      "source": "./plugins/websearch-exa",
+      "description": "Web search with code-optimized search via Exa MCP tools",
+      "keywords": ["websearch", "exa", "code-search", "api-docs"]
+    },
+    {
+      "name": "websearch-brave",
+      "source": "./plugins/websearch-brave",
+      "description": "Privacy-focused web search via Brave MCP tools",
+      "keywords": ["websearch", "brave", "privacy", "news"]
+    },
+    {
+      "name": "manage-marketplace-plugins",
+      "source": "./plugins/manage-marketplace-plugins",
+      "description": "Guide for managing plugins in this marketplace"
+    }
+  ]
+}
