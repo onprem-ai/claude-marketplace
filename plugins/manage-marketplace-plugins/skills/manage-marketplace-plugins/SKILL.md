@@ -124,6 +124,10 @@ claude plugin marketplace add ./path/to/claude-marketplace
 claude plugin install your-plugin-name@onprem-ai
 ```
 
+## Updating the Marketplace
+
+After pushing changes to the marketplace, users need to run `/plugin marketplace update onprem-ai` in Claude Code to refresh the cache and get the latest plugin versions. This is necessary because Claude Code caches marketplace data locally and may not immediately reflect changes pushed to the GitHub repository.
+
 ## Marketplaces
 
 - **onprem-ai** - The main marketplace for on-prem plugins

@@ -11,6 +11,8 @@ A registry of Claude Code plugins maintained by [onprem-ai](https://github.com/o
 /plugin marketplace add onprem-ai/claude-marketplace
 ```
 
+**Note**: After adding the marketplace, run `/plugin marketplace update onprem-ai` to refresh the cache. This ensures you get the latest plugin versions from GitHub.
+
 ### 2. List Plugins
 
 ```bash
@@ -38,6 +40,11 @@ A registry of Claude Code plugins maintained by [onprem-ai](https://github.com/o
 /plugin install plugin-name@onprem-ai
 ```
 
-## License
+## Troubleshooting
 
-MIT
+If you encounter validation errors like `commands: Invalid input` after installing a plugin:
+
+1. Run `/plugin marketplace update onprem-ai` to refresh the marketplace cache
+2. Uninstall and reinstall the plugin: `/plugin uninstall websearch-exa@onprem-ai` then `/plugin install websearch-exa@onprem-ai`
+
+This can happen when Claude Code caches an older version of the plugin before fixes were pushed to the repository.
