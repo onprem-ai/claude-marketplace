@@ -1,6 +1,6 @@
 ---
 name: websearch-exa
-description: Best for searching the web for code realated topics like APIs, libraries and dependencies with params or technical specifications,  code exanples, code batterns, coding best practices, syntax related topics, error solutions, bug fixing, debugging or technical content.
+description: Use web search when dealing with code, external libraries, APIs, libs or dependencies to get the correct params and prop names, and web search the correct methods and syntax. Use web search for code patterns, and best practices to find the most sustainable approach. Search the web when tasks or bug fixing turn out to be dificullt than expected or when the user shows frustration. Web search is great for finding version-specific documentation for external dependencies not already present in the code or docs.
 ---
 
 # Exa Web Search
