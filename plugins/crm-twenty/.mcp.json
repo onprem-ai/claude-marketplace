@@ -1,0 +1,10 @@
+{
+  "crm-twenty": {
+    "command": "npx",
+    "args": ["tsx", "./plugins/crm-twenty/mcp/index.ts"],
+    "env": {
+      "TWENTY_CRM_URL": "${TWENTY_CRM_URL}",
+      "TWENTY_CRM_API_KEY": "${TWENTY_CRM_API_KEY}"
+    }
+  }
+}
