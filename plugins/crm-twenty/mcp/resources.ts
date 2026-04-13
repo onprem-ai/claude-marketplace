@@ -1,6 +1,7 @@
 export interface ResourceDef {
   singular: string;
   plural: string;
+  typeName: string;
   querySingular: string;
   queryPlural: string;
   createMutation: string;
@@ -13,6 +14,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   people: {
     singular: "person",
     plural: "people",
+    typeName: "Person",
     querySingular: "person",
     queryPlural: "people",
     createMutation: "createPerson",
@@ -23,6 +25,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   companies: {
     singular: "company",
     plural: "companies",
+    typeName: "Company",
     querySingular: "company",
     queryPlural: "companies",
     createMutation: "createCompany",
@@ -33,6 +36,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   opportunities: {
     singular: "opportunity",
     plural: "opportunities",
+    typeName: "Opportunity",
     querySingular: "opportunity",
     queryPlural: "opportunities",
     createMutation: "createOpportunity",
@@ -43,6 +47,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   tasks: {
     singular: "task",
     plural: "tasks",
+    typeName: "Task",
     querySingular: "task",
     queryPlural: "tasks",
     createMutation: "createTask",
@@ -53,6 +58,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   notes: {
     singular: "note",
     plural: "notes",
+    typeName: "Note",
     querySingular: "note",
     queryPlural: "notes",
     createMutation: "createNote",
@@ -63,6 +69,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   attachments: {
     singular: "attachment",
     plural: "attachments",
+    typeName: "Attachment",
     querySingular: "attachment",
     queryPlural: "attachments",
     createMutation: "createAttachment",
@@ -73,6 +80,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   favorites: {
     singular: "favorite",
     plural: "favorites",
+    typeName: "Favorite",
     querySingular: "favorite",
     queryPlural: "favorites",
     createMutation: "createFavorite",
@@ -83,6 +91,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   timelineActivities: {
     singular: "timelineActivity",
     plural: "timelineActivities",
+    typeName: "TimelineActivity",
     querySingular: "timelineActivity",
     queryPlural: "timelineActivities",
     createMutation: "createTimelineActivity",
@@ -93,6 +102,7 @@ export const RESOURCES: Record<string, ResourceDef> = {
   workspaceMembers: {
     singular: "workspaceMember",
     plural: "workspaceMembers",
+    typeName: "WorkspaceMember",
     querySingular: "workspaceMember",
     queryPlural: "workspaceMembers",
     createMutation: "createWorkspaceMember",

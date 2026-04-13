@@ -44,8 +44,8 @@ export function buildSearchQuery(resource: ResourceDef, params: SearchParams): Q
   }
 
   const varDefs: string[] = [];
-  if (params.filter) varDefs.push("$filter: JSON");
-  if (params.orderBy) varDefs.push("$orderBy: JSON");
+  if (params.filter) varDefs.push(`$filter: ${resource.typeName}FilterInput`);
+  if (params.orderBy) varDefs.push(`$orderBy: [${resource.typeName}OrderByInput]`);
   if (params.after) varDefs.push("$after: String");
 
   const varDefStr = varDefs.length > 0 ? `(${varDefs.join(", ")})` : "";
@@ -69,7 +69,7 @@ export function buildGetQuery(resource: ResourceDef, id: string, fields?: string
   const resolvedFields = resolveFields(resource, fields);
   const operationName = `Get${resource.singular.charAt(0).toUpperCase()}${resource.singular.slice(1)}`;
 
-  const query = `query ${operationName}($filter: JSON) {
+  const query = `query ${operationName}($filter: ${resource.typeName}FilterInput!) {
   ${resource.querySingular}(filter: $filter) {
     ${resolvedFields}
   }
@@ -87,7 +87,7 @@ export function buildCreateMutation(resource: ResourceDef, data: Record<string, 
   const resolvedFields = resolveFields(resource, fields);
   const operationName = `Create${resource.singular.charAt(0).toUpperCase()}${resource.singular.slice(1)}`;
 
-  const query = `mutation ${operationName}($data: JSON!) {
+  const query = `mutation ${operationName}($data: ${resource.typeName}CreateInput!) {
   ${resource.createMutation}(data: $data) {
     ${resolvedFields}
   }
@@ -105,7 +105,7 @@ export function buildUpdateMutation(resource: ResourceDef, id: string, data: Rec
   const resolvedFields = resolveFields(resource, fields);
   const operationName = `Update${resource.singular.charAt(0).toUpperCase()}${resource.singular.slice(1)}`;
 
-  const query = `mutation ${operationName}($id: ID!, $data: JSON!) {
+  const query = `mutation ${operationName}($id: UUID!, $data: ${resource.typeName}UpdateInput!) {
   ${resource.updateMutation}(id: $id, data: $data) {
     ${resolvedFields}
   }
@@ -122,7 +122,7 @@ export function buildUpdateMutation(resource: ResourceDef, id: string, data: Rec
 export function buildDeleteMutation(resource: ResourceDef, id: string): QueryResult {
   const operationName = `Delete${resource.singular.charAt(0).toUpperCase()}${resource.singular.slice(1)}`;
 
-  const query = `mutation ${operationName}($id: ID!) {
+  const query = `mutation ${operationName}($id: UUID!) {
   ${resource.deleteMutation}(id: $id) {
     id deletedAt
   }
