@@ -20,6 +20,12 @@
       "name": "manage-marketplace-plugins",
       "source": "./plugins/manage-marketplace-plugins",
       "description": "Guide for managing plugins in this marketplace"
+    },
+    {
+      "name": "crm-twenty",
+      "source": "./plugins/crm-twenty",
+      "description": "Twenty CRM integration with search, create, update, and delete operations",
+      "keywords": ["crm", "twenty", "sales", "contacts", "companies", "deals"]
     }
   ]
 }
