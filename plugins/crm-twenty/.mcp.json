@@ -1,9 +1,8 @@
 {
   "crm-twenty": {
     "command": "npx",
-    "args": ["tsx", "${MCP_CRM_TWENTY_PATH}/src/index.ts"],
+    "args": ["-y", "github:onprem-ai/mcp-crm-twenty"],
     "env": {
-      "MCP_CRM_TWENTY_PATH": "${MCP_CRM_TWENTY_PATH}",
       "TWENTY_CRM_URL": "${TWENTY_CRM_URL}",
       "TWENTY_CRM_API_KEY": "${TWENTY_CRM_API_KEY}"
     }
